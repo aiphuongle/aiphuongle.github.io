@@ -2,47 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!--
-        VGG Image Annotator (via)
-        www.robots.ox.ac.uk/~vgg/software/via/
+    <title>Viet Tech Tools Annotation Tooling</title>
+    <meta name="author" content="viettechtools">
+    <meta name="description" content="VTT is a standalone image annotator application packaged as a single HTML file (< 400 KB) that runs on most modern web browsers.">
 
-        Copyright (c) 2016-2018, Abhishek Dutta, Visual Geometry Group, Oxford University and VIA Contributors..
-        All rights reserved.
-
-        Redistribution and use in source and binary forms, with or without
-        modification, are permitted provided that the following conditions are met:
-
-        Redistributions of source code must retain the above copyright notice, this
-        list of conditions and the following disclaimer.
-        Redistributions in binary form must reproduce the above copyright notice,
-        this list of conditions and the following disclaimer in the documentation
-        and/or other materials provided with the distribution.
-        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-        ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-        LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-        CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-        SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-        INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-        CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-        ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-        POSSIBILITY OF SUCH DAMAGE.
-      -->
-    <title>VGG Image Annotator</title>
-    <meta name="author" content="Abhishek Dutta">
-    <meta name="description" content="VIA is a standalone image annotator application packaged as a single HTML file (< 400 KB) that runs on most modern web browsers.">
-
-    <!--
-    Development of VIA is supported by the EPSRC programme grant
-    Seebibyte: Visual Search for the Era of Big Data (EP/M013774/1).
-    Using Google Analytics, we record the usage of this application.
-    This data is used in reporting of this programme grant.
-
-    If you do not wish to share this data, you can safely remove the
-    javascript code below.
-    -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -50,16 +14,11 @@
       ga('create', 'UA-20555581-2', 'auto');
       ga('set', 'page', 'via-2.0.0.html');
       ga('send', 'pageview');
-    </script>
+    </script> -->
 
 <!-- START: Contents of file: via.css-->
 <style>
-/*
-  CSS style definitions for VIA 2.x.y
-  http://www.robots.ox.ac.uk/~vgg/software/via/
-  Author: Abhishek Dutta <adutta@robots.ox.ac.uk>
-  Date: moved from index.html to via.css on 13 June 2019
-*/
+
 
 body {
     min-width: 200px;
@@ -1082,8 +1041,7 @@ ul.region_shape .selected {
     <svg style="display:none;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <symbol id="via_logo">
-          <!-- Logo designed by Abhishek Dutta <adutta@robots.ox.ac.uk>, May 2018 -->
-          <title>VGG Image Annotator Logo</title>
+          <title>Viet Tech Tools Annotator Logo</title>
           <rect width="400" height="160" x="0" y="0" fill="#212121"></rect>
 
           <text x="56" y="130" font-family="Serif" font-size="100" fill="white">V</text>
@@ -1091,7 +1049,7 @@ ul.region_shape .selected {
           <text x="270" y="130" font-family="Serif" font-size="100" fill="white">A</text>
 
           <rect width="80" height="100" x="52" y="40" stroke="yellow" fill="none" stroke-width="2"></rect>
-          <text x="72" y="30" font-family="'Comic Sans MS', cursive, sans-serif" font-size="18" fill="yellow">VGG</text>
+          <text x="72" y="30" font-family="'Comic Sans MS', cursive, sans-serif" font-size="18" fill="yellow">VTT</text>
 
           <rect width="50" height="100" x="175" y="45" stroke="yellow" fill="none" stroke-width="2"></rect>
           <text x="175" y="35" font-family="'Comic Sans MS', cursive, sans-serif" font-size="18" fill="yellow">Image</text>
@@ -1230,7 +1188,7 @@ ul.region_shape .selected {
               <li onclick="settings_panel_toggle()" title="Show/edit project settings">Settings</li>
               <li class="submenu_divider"></li>
               <li onclick="sel_local_images()" title="Add images locally stored in this computer">Add local files</li>
-              <li onclick="project_file_add_url_with_input()" title="Add images from a web URL (e.g. http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg)">Add files from URL</li>
+              <li onclick="project_file_add_url_with_input()" title="Add images from a web URL (e.g. https://aiphuongle.github.io/images/swan.jpg)">Add files from URL</li>
               <li onclick="project_file_add_abs_path_with_input()" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)">Add file using absolute path</li>
               <li onclick="sel_local_data_file('files_url')" title="Add images from a list of web url or absolute path stored in a text file (one url or path per line)">Add url or path from text file</li>
               <li onclick="project_file_remove_with_confirm()" title="Remove selected file (i.e. file currently being shown)">Remove file</li>
@@ -1641,16 +1599,16 @@ ul.region_shape .selected {
 
         <div id="page_start_info" class="display_area_content display_none narrow_page_content">
           <ul>
-            <li>To start annotation, <span class="text_button" title="Load or Add Images" onclick="sel_local_images()">select images</span> (or, add images from <span class="text_button" title="Add images from a web URL (e.g. http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg)" onclick="project_file_add_url_with_input()">URL</span> or <span class="text_button" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)" onclick="project_file_add_abs_path_with_input()">absolute path</span>) and draw regions</li>
+            <li>To start annotation, <span class="text_button" title="Load or Add Images" onclick="sel_local_images()">select images</span> (or, add images from <span class="text_button" title="Add images from a web URL (e.g. https://aiphuongle.github.io/images/swan.jpg)" onclick="project_file_add_url_with_input()">URL</span> or <span class="text_button" title="Add images using absolute path of file (e.g. /home/abhishek/image1.jpg)" onclick="project_file_add_abs_path_with_input()">absolute path</span>) and draw regions</li>
             <li>Use <span class="text_button" title="Toggle attributes editor panel" onclick="toggle_attributes_editor()">attribute editor</span> to define attributes (e.g. name) and <span class="text_button" title="Toggle annotations editor panel" onclick="annotation_editor_toggle_all_regions_editor()">annotation editor</span> to describe each region (e.g. cat) using these attributes.</li>
             <li>Remember to <span class="text_button" onclick="project_save_with_confirm()">save</span> your project before closing this application so that you can <span class="text_button" onclick="project_open_select_project_file()">load</span> it later to continue annotation.</li>
-            <li>For help, see the <span class="text_button" onclick="set_display_area_content(VIA_DISPLAY_AREA_CONTENT_NAME.PAGE_GETTING_STARTED)">Getting Started</span> page and pre-loaded demo: <a href="http://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html">image annotation</a> and <a href="http://www.robots.ox.ac.uk/~vgg/software/via/via_face_demo.html">face annotation</a>.</li>
+            <li>For help, see the <span class="text_button" onclick="set_display_area_content(VIA_DISPLAY_AREA_CONTENT_NAME.PAGE_GETTING_STARTED)">Getting Started</span> page and pre-loaded demo: <a href="https://aiphuongle.github.io/via_demo.html">image annotation</a> and <a href="https://aiphuongle.github.io/via_face_demo.html">face annotation</a>.</li>
           </ul>
 
         </div>
 
         <div id="page_getting_started" class="display_area_content display_none narrow_page_content">
-          <p>A more detailed user guide (with screenshots and descriptions) is <a href="http://www.robots.ox.ac.uk/~vgg/software/via/docs/user_guide.html">available here</a>.</p>
+          <p>A more detailed user guide (with screenshots and descriptions) is <a href="https://aiphuongle.github.io/docs/user_guide.html">available here</a>.</p>
           <ol>
             <li><strong>Load Images</strong>: The first step is to load all the images that you wish to annotate. There are multiple ways to add images to a VIA project. Choose the method that suits your use case.
               <ul>
@@ -1662,7 +1620,7 @@ ul.region_shape .selected {
                 </li>
                 <li>Method 2: Adding files from URL or absolute path
                   <ol>
-                    <li>Click <span class="text_button" title="Add images from a web URL (e.g. http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg)" onclick="project_file_add_url_with_input()"><code>Project &rarr; Add files from URL</code></span></li>
+                    <li>Click <span class="text_button" title="Add images from a web URL (e.g. https://aiphuongle.github.io/images/swan.jpg)" onclick="project_file_add_url_with_input()"><code>Project &rarr; Add files from URL</code></span></li>
                     <li>Enter URL and click <code>OK</code></li>
                   </ol>
                 </li>
@@ -1709,7 +1667,7 @@ ul.region_shape .selected {
               </ul>
             </li>
 
-            <li><strong>Create Annotations</strong>: For a more detailed description of this step, see <a href="http://www.robots.ox.ac.uk/~vgg/software/via/docs/creating_annotations.html">Creating Annotations : VIA User Guide</a>. Click the <span class="text_button" onclick="annotation_editor_toggle_all_regions_editor()"><code>View &rarr; Toggle attributes editor</code></span> to show attributes editor panel in left sidebar and add the desired file or region attributes (e.g. name). Now click <span class="text_button" onclick="annotation_editor_toggle_all_regions_editor()"><code>View &rarr; Toggle annotations editor</code></span> to show the annotation editor panel in the bottom side. Update the annotations for each region.</li>
+            <li><strong>Create Annotations</strong>: For a more detailed description of this step, see <a href="https://aiphuongle.github.io/docs/creating_annotations.html">Creating Annotations : VIA User Guide</a>. Click the <span class="text_button" onclick="annotation_editor_toggle_all_regions_editor()"><code>View &rarr; Toggle attributes editor</code></span> to show attributes editor panel in left sidebar and add the desired file or region attributes (e.g. name). Now click <span class="text_button" onclick="annotation_editor_toggle_all_regions_editor()"><code>View &rarr; Toggle annotations editor</code></span> to show the annotation editor panel in the bottom side. Update the annotations for each region.</li>
             <li><strong>Export Annotations</strong>: To export the annotations in json or csv format, click <span class="text_button" onclick="download_all_region_data('csv')"><code>Annotation &rarr; Export annotations</code></span> in top menubar.</li>
             <li><strong>Save Project</strong>: To save the project, click <span class="text_button" onclick="project_save_with_confirm()"><code>Project &rarr; Save</code></span> in top menubar.</li>
           </ol>
@@ -1717,7 +1675,7 @@ ul.region_shape .selected {
 
         <div id="page_load_ongoing" class="display_area_content narrow_page_content">
           <div style="text-align:center">
-            <a href="http://www.robots.ox.ac.uk/~vgg/software/via/">
+            <a href="https://aiphuongle.github.io/">
               <svg height="160" viewbox="0 0 400 160" style="background-color:#212121;">
                 <use xlink:href="#via_logo"></use>
               </svg>
@@ -1728,7 +1686,7 @@ ul.region_shape .selected {
 
         <div id="page_about" class="display_area_content display_none" style="width:40rem !important">
           <div style="text-align:center">
-            <a href="http://www.robots.ox.ac.uk/~vgg/software/via/">
+            <a href="https://aiphuongle.github.io/">
               <svg height="160" viewbox="0 0 400 160" style="background-color:#212121;">
                 <use xlink:href="#via_logo"></use>
               </svg>
@@ -1736,7 +1694,7 @@ ul.region_shape .selected {
           </div>
 
           <p style="font-family:mono; font-size:0.8em;text-align:center;"><a href="https://gitlab.com/vgg/via/blob/master/CHANGELOG">Version 2.0.12</a></p>
-          <p>VGG Image Annotator (VIA) is an image annotation tool that can be used to define regions in an image and create textual descriptions of those regions. VIA is an <a href="https://gitlab.com/vgg/via/">open source project</a> developed at the <a href="http://www.robots.ox.ac.uk/~vgg/">Visual Geometry Group</a> and released under the BSD-2 clause <a href="https://gitlab.com/vgg/via/blob/master/LICENSE">license</a>.</p>
+          <p>VietTechTools Image Annotator (VIA) is an image annotation tool that can be used to define regions in an image and create textual descriptions of those regions.</p>
           <p>Here is a list of some salient features of VIA:
             <ul>
               <li>based solely on HTML, CSS and Javascript (no external javascript libraries)</li>
@@ -1746,14 +1704,13 @@ ul.region_shape .selected {
               <li>import/export of region data in csv and json file format</li>
             </ul>
           </p>
-          <p>For more details, visit <a href="http://www.robots.ox.ac.uk/~vgg/software/via/">http://www.robots.ox.ac.uk/~vgg/software/via/</a>.</p>
+          <p>For more details, visit <a href="https://aiphuongle.github.io/">https://aiphuongle.github.io/</a>.</p>
           <p>&nbsp;</p>
-          <p>Copyright &copy; 2016-2021, <a href="mailto:adutta-removeme@robots.ox.ac.uk">Abhishek Dutta</a>,Visual Geometry Group, Oxford University and <a target="_blank" href="https://gitlab.com/vgg/via/blob/master/Contributors.md">VIA Contributors</a>.</p>
         </div> <!-- end of page_about -->
 
         <div id="page_license" class="display_area_content display_none narrow_page_content">
           <pre>
-Copyright (c) 2016-2022, Abhishek Dutta, Visual Geometry Group, Oxford University and VIA Contributors.
+Copyright (c) 2016-2022, VietTechTools.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -1786,33 +1743,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
 <!-- START: Contents of file: src/demo/_via_basic_demo.js-->
 <script>
-/*
-  VGG Image Annotator (via)
-  www.robots.ox.ac.uk/~vgg/software/via/
-
-  Copyright (c) 2016-2018, Abhishek Dutta.
-  All rights reserved.
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions are met:
-
-  Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-  Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-  POSSIBILITY OF SUCH DAMAGE.
-*/
 
 function _via_load_submodules() {
   _via_basic_demo_load_img();
@@ -1853,7 +1783,7 @@ function _via_basic_demo_define_attributes() {
 }
 
 function _via_basic_demo_define_annotations() {
-  var annotations_json = '{"adutta_swan.jpg-1":{"filename":"adutta_swan.jpg","size":-1,"regions":[{"shape_attributes":{"name":"polygon","all_points_x":[116,94,176,343,383,385,369,406,398,364,310,297,304,244,158],"all_points_y":[157,195,264,273,261,234,222,216,155,124,135,170,188,170,175]},"region_attributes":{"name":"Swan","type":"bird","image_quality":{"good_illumination":true}}}],"file_attributes":{"caption":"Swan in lake Geneve","public_domain":"no","image_url":"http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg"}},"wikimedia_death_of_socrates.jpg-1":{"filename":"wikimedia_death_of_socrates.jpg","size":-1,"regions":[{"shape_attributes":{"name":"rect","x":174,"y":139,"width":108,"height":227},"region_attributes":{"name":"Plato","type":"human","image_quality":{"good_illumination":true}}},{"shape_attributes":{"name":"rect","x":347,"y":114,"width":91,"height":209},"region_attributes":{"name":"Socrates","type":"human","image_quality":{"frontal":true,"good_illumination":true}}},{"shape_attributes":{"name":"ellipse","cx":316,"cy":180,"rx":17,"ry":12},"region_attributes":{"name":"Hemlock","type":"cup"}}],"file_attributes":{"caption":"The Death of Socrates by David","public_domain":"yes","image_url":"https://en.wikipedia.org/wiki/The_Death_of_Socrates#/media/File:David_-_The_Death_of_Socrates.jpg"}}}';
+  var annotations_json = '{"adutta_swan.jpg-1":{"filename":"adutta_swan.jpg","size":-1,"regions":[{"shape_attributes":{"name":"polygon","all_points_x":[116,94,176,343,383,385,369,406,398,364,310,297,304,244,158],"all_points_y":[157,195,264,273,261,234,222,216,155,124,135,170,188,170,175]},"region_attributes":{"name":"Swan","type":"bird","image_quality":{"good_illumination":true}}}],"file_attributes":{"caption":"Swan in lake Geneve","public_domain":"no","image_url":"https://aiphuongle.github.io/images/swan.jpg"}},"wikimedia_death_of_socrates.jpg-1":{"filename":"wikimedia_death_of_socrates.jpg","size":-1,"regions":[{"shape_attributes":{"name":"rect","x":174,"y":139,"width":108,"height":227},"region_attributes":{"name":"Plato","type":"human","image_quality":{"good_illumination":true}}},{"shape_attributes":{"name":"rect","x":347,"y":114,"width":91,"height":209},"region_attributes":{"name":"Socrates","type":"human","image_quality":{"frontal":true,"good_illumination":true}}},{"shape_attributes":{"name":"ellipse","cx":316,"cy":180,"rx":17,"ry":12},"region_attributes":{"name":"Hemlock","type":"cup"}}],"file_attributes":{"caption":"The Death of Socrates by David","public_domain":"yes","image_url":"https://en.wikipedia.org/wiki/The_Death_of_Socrates#/media/File:David_-_The_Death_of_Socrates.jpg"}}}';
 
   import_annotations_from_json(annotations_json);
 }
@@ -1870,60 +1800,11 @@ _via_basic_demo_img.push('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QD
 <!-- END: Contents of file: src/demo/_via_basic_demo.js-->
 <!-- START: Contents of file: via.js-->
 <script>
-/*
-  VGG Image Annotator (via)
-  www.robots.ox.ac.uk/~vgg/software/via/
-
-  Copyright (c) 2016-2019, Abhishek Dutta, Visual Geometry Group, Oxford University and VIA Contributors.
-  All rights reserved.
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions are met:
-
-  Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-  Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-  POSSIBILITY OF SUCH DAMAGE.
-*/
-
-/*
-  Links:
-  - https://gitlab.com/vgg/via/blob/master/Contributors.md : list of developers who have contributed code to the VIA project.
-  - https://gitlab.com/vgg/via/blob/master/CodeDoc.md : source code documentation
-  - https://gitlab.com/vgg/via/blob/master/CONTRIBUTING.md : guide for contributors
-
-  This source code can be grouped into the following categories:
-  - Data structure for annotations
-  - Initialization routine
-  - Handlers for top navigation bar
-  - Local file uploaders
-  - Data Importer
-  - Data Exporter
-  - Maintainers of user interface
-  - Image click handlers
-  - Canvas update routines
-  - Region collision routines
-  - Shortcut key handlers
-  - Persistence of annotation data in browser cache (i.e. localStorage)
-  - Handlers for attributes input panel (spreadsheet like user input panel)
-*/
 
 "use strict";
 
 var VIA_VERSION      = '2.0.11';
-var VIA_NAME         = 'VGG Image Annotator';
+var VIA_NAME         = 'VTT Image Annotator';
 var VIA_SHORT_NAME   = 'VIA';
 var VIA_REGION_SHAPE = { RECT:'rect',
                          CIRCLE:'circle',
@@ -3141,9 +3022,9 @@ function export_project_to_coco_format() {
   var coco = { 'info':{}, 'images':[], 'annotations':[], 'licenses':[], 'categories':[] };
   coco['info'] = { 'year': new Date().getFullYear(),
                    'version': '1.0',
-                   'description': 'VIA project exported to COCO format using VGG Image Annotator (http://www.robots.ox.ac.uk/~vgg/software/via/)',
+                   'description': 'VIA project exported to COCO format using VTT Image Annotator (https://aiphuongle.github.io/)',
                    'contributor': '',
-                   'url': 'http://www.robots.ox.ac.uk/~vgg/software/via/',
+                   'url': 'https://aiphuongle.github.io/',
                    'date_created': new Date().toString(),
                  };
   coco['licenses'] = [ {'id':0, 'name':'Unknown License', 'url':''} ]; // indicates that license is unknown
@@ -9449,7 +9330,7 @@ function project_file_add_abs_path_input_done(input) {
 
 function project_file_add_url_with_input() {
   var config = {'title':'Add File using URL' };
-  var input = { 'url': { type:'text', name:'add one URL', placeholder:'http://www.robots.ox.ac.uk/~vgg/software/via/images/swan.jpg', disabled:false, size:50 },
+  var input = { 'url': { type:'text', name:'add one URL', placeholder:'https://aiphuongle.github.io/images/swan.jpg', disabled:false, size:50 },
 		'url_list': { type:'textarea', name:'or, add multiple URL (one url per line)', placeholder:'http://www.example.com/image1.jpg\nhttp://www.example.com/image2.jpg\nhttp://www.example.com/image3.png', disabled:false, rows:5, cols:80 }
               };
 
